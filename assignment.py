@@ -11,7 +11,13 @@ def task1_sum_of_two_numbers(a, b):
     and returns their sum.
     Test the function by calling it with different numbers.
     """
-    pass
+    x=a+b
+    return x
+ans=task1_sum_of_two_numbers(3,9)
+print(ans)
+pass
+    
+
 
 
 # 2
@@ -21,7 +27,11 @@ def task2_square_number(n):
     Write a function that accepts a number and returns its square.
     Example: square_number(5) → 25
     """
-    pass
+    y=n**2
+    return y
+ans2=task2_square_number(10)
+print(ans2)
+pass
 
 
 # 3
@@ -31,7 +41,9 @@ def task3_greet_user(name):
     Write a function that accepts a person's name as a parameter
     and prints a greeting message like: "Hello, John!"
     """
-    pass
+    print(f"Good night {name}")
+task3_greet_user("Mr Bankat")    
+pass
 
 
 # 4
@@ -42,7 +54,12 @@ def task4_area_of_rectangle(length, width):
     and returns its area.
     Formula: area = length * width
     """
-    pass
+    if length <0 or width <0:
+        return "Error : lenght and width cannot be negative"
+    area= length * width
+    return area
+print(task4_area_of_rectangle(4,6))
+pass
 
 
 # 5
@@ -53,7 +70,13 @@ def task5_perimeter_of_square(side):
     and returns its perimeter.
     Formula: perimeter = 4 * side
     """
-    pass
+    if side <=0:
+        return "Error"
+
+    perimeter= 4*side
+    return perimeter
+print(task5_perimeter_of_square(65))
+pass
 
 
 # 6
@@ -63,7 +86,10 @@ def task6_celsius_to_fahrenheit(celsius):
     Write a function that converts a temperature from Celsius to Fahrenheit.
     Formula: (celsius * 9/5) + 32
     """
-    pass
+    fahrenheit =(celsius * 9/5) +32
+    return fahrenheit
+print(task6_celsius_to_fahrenheit(0))    
+pass
 
 
 # 7
@@ -73,7 +99,10 @@ def task7_find_max(a, b, c):
     Write a function that accepts three numbers as parameters
     and returns the largest number.
     """
-    pass
+    max_num= max(a,b,c)
+    return max_num
+print(task7_find_max(9,2,11))
+pass
 
 
 # 8
@@ -83,7 +112,12 @@ def task8_even_or_odd(n):
     Write a function that accepts a number and returns
     "Even" if the number is even, and "Odd" if the number is odd.
     """
-    pass
+    if n%2==0:
+        return "Even"
+    else:
+        return "Odd"
+print(task8_even_or_odd(9))    
+pass
 
 
 # 9
@@ -94,7 +128,10 @@ def task9_count_vowels(word):
     and returns the number of vowels (a, e, i, o, u) in the word.
     Example: count_vowels("apple") → 2
     """
-    pass
+    vowels=("a","e","i","o","u")
+    return sum(1 for char in word.lower() if char in vowels)
+print(task9_count_vowels("peel"))    
+pass
 
 
 # 10
@@ -105,7 +142,13 @@ def task10_multiply_list(numbers):
     and returns the product of all the numbers in the list.
     Example: multiply_list([1, 2, 3, 4]) → 24
     """
-    pass
+    prod=1
+    for num in numbers:
+        prod *= num
+    return prod    
+numbers=[1,2,3,4]    
+print(task10_multiply_list(numbers))    
+pass
 
 
 # 11
@@ -116,7 +159,10 @@ def task11_reverse_string(text):
     and returns the string reversed.
     Example: reverse_string("hello") → "olleh"
     """
-    pass
+    print(f"{text [::-1]}")
+
+task11_reverse_string("Bankat")    
+pass
 
 
 # 12
@@ -126,10 +172,20 @@ def task12_is_prime(n):
     Write a function that accepts a number as a parameter
     and returns True if the number is prime, otherwise False.
     """
-    pass
+    if  n < 0:
+        raise ValueError("Input must be a non-negative integer.")
+    if n <= 1:
+        return False
+    for i in range(2, int(n**0.5) + 1):
+        if n % i == 0:
+            return False
+    return True
+print(task12_is_prime(23))
+pass
 
 
 # 13
+myname="Gotom"
 def task13_scope_demo():
     """
     Task 13:
@@ -138,7 +194,12 @@ def task13_scope_demo():
     create a local variable with the same name. Print both
     to show how local and global scope works.
     """
-    pass
+    myname="Golpwana"
+    print("inside variable=",myname)
+
+print("outside variable",myname)    
+task13_scope_demo()
+pass
 
 
 # 14
