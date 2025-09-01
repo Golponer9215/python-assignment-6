@@ -699,10 +699,14 @@ def task42_find_mode(numbers):
     Write a function that finds the mode (most frequent number) in a list.
     If there are multiple modes, return any one of them.
     """
-   # from collections import counter
-    #counts = counter(numbers)
-   # return max(counts,key=counts.get)
-#print(task42_find_mode([1,2,3,33,4,7,3,4,5,6,6,7,7,8]))
+    from collections import Counter
+
+
+    def task42_find_mode(numbers):
+        counts = Counter(number)
+        return max(counts, key=counts.get)
+print(task42_find_mode([1,2,3,33,4,7,3,4,5,6,6,7,7,8]))
+
 pass
 
 
